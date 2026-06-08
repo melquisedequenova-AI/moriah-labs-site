@@ -246,6 +246,61 @@ function FinalCTA() {
   );
 }
 
+/* ---------- Founder ---------- */
+function Founder() {
+  return (
+    <section style={{
+      padding: "48px 0 40px",
+      display: "flex",
+      justifyContent: "center",
+    }}>
+      <div data-reveal style={{
+        display: "flex",
+        alignItems: "center",
+        gap: "16px",
+        opacity: "var(--reveal-opacity, 1)",
+      }}>
+        <img
+          src="/founder.jpg"
+          alt="Melquisedeque Nova — Fundador"
+          style={{
+            width: "52px",
+            height: "52px",
+            borderRadius: "50%",
+            objectFit: "cover",
+            objectPosition: "center top",
+            border: "1.5px solid rgba(201,162,39,0.4)",
+            flexShrink: 0,
+          }}
+        />
+        <div style={{ lineHeight: 1.3 }}>
+          <p style={{
+            fontFamily: "'Hanken Grotesk', sans-serif",
+            fontSize: "0.8rem",
+            fontWeight: 600,
+            color: "var(--fg, #F3F0E9)",
+            margin: 0,
+            letterSpacing: "0.01em",
+          }}>
+            Melquisedeque Nova
+          </p>
+          <p style={{
+            fontFamily: "'JetBrains Mono', monospace",
+            fontSize: "0.62rem",
+            color: "var(--accent, #C9A227)",
+            margin: 0,
+            letterSpacing: "0.12em",
+            textTransform: "uppercase",
+            marginTop: "2px",
+          }}>
+            Fundador · Moriah Labs
+          </p>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 /* ---------- Footer ---------- */
 function Footer() {
   const year = new Date().getFullYear();
@@ -284,4 +339,4 @@ function Footer() {
   );
 }
 
-export { Manifesto, Services, Diferenciais, Processo, Impact, FinalCTA, Footer };
+export { Manifesto, Services, Diferenciais, Processo, Impact, FinalCTA, Founder, Footer };

@@ -6,7 +6,7 @@ import {
   TweakRadio, TweakColor, TweakSelect
 } from './TweaksPanel';
 import { Hero } from './Heroes';
-import { Manifesto, Services, Diferenciais, Processo, Impact, FinalCTA, Footer } from './Sections';
+import { Manifesto, Services, Diferenciais, Processo, Impact, FinalCTA, Founder, Footer } from './Sections';
 
 const TWEAK_DEFAULTS = {
   "heroVariant": "A",
@@ -123,6 +123,8 @@ export default function App(){
 
         <div className={bodySurf}><FinalCTA/></div>
       </main>
+
+      <div className="s-dark"><Founder/></div>
 
       <div className="s-dark"><Footer/></div>
 
