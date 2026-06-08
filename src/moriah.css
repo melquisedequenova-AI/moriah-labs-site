@@ -159,7 +159,7 @@ p { margin: 0; }
   letter-spacing: -0.02em;
   color: var(--nav-fg, #F3F0E9);
   text-decoration: none;
-  display: inline-flex; align-items: baseline; gap: .42em;
+  display: inline-flex; align-items: center; gap: .55em;
   font-weight: 440;
   white-space: nowrap;
 }

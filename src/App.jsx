@@ -42,7 +42,7 @@ function Nav({ heroDark }) {
     : { "--nav-fg":"#15130E", "--nav-bg":"#F4F1EA", "--nav-line":"rgba(21,19,14,.14)" };
   return (
     <nav className="nav" data-scrolled={scrolled} style={vars}>
-      <a className="brand" href="#top"><img src="/logo.png" alt="Moriah Labs AI" style={{height:"48px",width:"48px",objectFit:"contain",display:"inline-block",verticalAlign:"middle",marginRight:"10px",filter:"drop-shadow(0 0 6px rgba(201,162,39,0.3))"}} />Moriah Labs</a>
+      <a className="brand" href="#top"><img src="/logo.png" alt="Moriah Labs AI" style={{height:"56px",width:"56px",objectFit:"contain",display:"block",flexShrink:0,filter:"drop-shadow(0 0 8px rgba(201,162,39,0.35))"}} />Moriah Labs</a>
       <div className="nav-links">
         <a className="nav-hide" href="#manifesto">Manifesto</a>
         <a className="nav-hide" href="#servicos">Serviços</a>
