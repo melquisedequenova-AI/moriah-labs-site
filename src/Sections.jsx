@@ -257,26 +257,26 @@ function Founder() {
       <div data-reveal style={{
         display: "flex",
         alignItems: "center",
-        gap: "16px",
+        gap: "20px",
         opacity: "var(--reveal-opacity, 1)",
       }}>
         <img
           src="/founder.jpg"
           alt="Melquisedeque Nova — Fundador"
           style={{
-            width: "52px",
-            height: "52px",
+            width: "88px",
+            height: "88px",
             borderRadius: "50%",
             objectFit: "cover",
             objectPosition: "center top",
-            border: "1.5px solid rgba(201,162,39,0.4)",
+            border: "2px solid rgba(201,162,39,0.45)",
             flexShrink: 0,
           }}
         />
-        <div style={{ lineHeight: 1.3 }}>
+        <div style={{ lineHeight: 1.4 }}>
           <p style={{
             fontFamily: "'Hanken Grotesk', sans-serif",
-            fontSize: "0.8rem",
+            fontSize: "1.05rem",
             fontWeight: 600,
             color: "var(--fg, #F3F0E9)",
             margin: 0,
@@ -286,12 +286,12 @@ function Founder() {
           </p>
           <p style={{
             fontFamily: "'JetBrains Mono', monospace",
-            fontSize: "0.62rem",
+            fontSize: "0.7rem",
             color: "var(--accent, #C9A227)",
             margin: 0,
             letterSpacing: "0.12em",
             textTransform: "uppercase",
-            marginTop: "2px",
+            marginTop: "4px",
           }}>
             Fundador · Moriah Labs
           </p>
