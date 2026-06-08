@@ -42,7 +42,7 @@ function Nav({ heroDark }) {
     : { "--nav-fg":"#15130E", "--nav-bg":"#F4F1EA", "--nav-line":"rgba(21,19,14,.14)" };
   return (
     <nav className="nav" data-scrolled={scrolled} style={vars}>
-      <a className="brand" href="#top"><span className="mark">ML</span>Moriah&nbsp;Labs</a>
+      <a className="brand" href="#top"><img src="/logo.png" alt="ML" style={{height:"26px",width:"26px",objectFit:"contain",display:"inline-block",verticalAlign:"middle",marginRight:"6px"}} />Moriah Labs</a>
       <div className="nav-links">
         <a className="nav-hide" href="#manifesto">Manifesto</a>
         <a className="nav-hide" href="#servicos">Serviços</a>
