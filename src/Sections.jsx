@@ -308,7 +308,9 @@ function Footer() {
     <footer className="footer">
       <div className="wrap footer-grid">
         <div className="footer-brand">
-          <a className="brand" href="#top"><span className="mark">ML</span>Moriah Labs</a>
+          <a href="#top" style={{ display:"inline-flex", alignItems:"center", textDecoration:"none" }}>
+            <img src="/logo.png" alt="Moriah Labs AI" style={{ height:"48px", width:"auto", display:"block" }} />
+          </a>
           <p className="footer-tag">Automação, sistemas web, sites e identidade visual.</p>
         </div>
         <nav className="footer-col">
