@@ -394,11 +394,20 @@ const PROJECTS = [
   {
     id: "ofertasnow",
     name: "OfertasNow",
-    category: "E-commerce / Ofertas",
-    description: "Plataforma de ofertas e promoções com foco em curadoria de produtos e experiência de compra simplificada.",
+    category: "Grupos de Ofertas",
+    description: "Plataforma de grupos de ofertas e promoções via WhatsApp, com curadoria de produtos e links diretos de entrada.",
     url: "http://ofertasnow.app.br/",
     screen: "/screens/ofertasnow.jpg",
     tags: ["HTML", "CSS", "JavaScript"],
+  },
+  {
+    id: "obreiro-n8n",
+    name: "Obreiro Online — Automação",
+    category: "Automação WhatsApp",
+    description: "Mentor bíblico via WhatsApp com IA: transcrição de áudio, menus interativos, versículo diário e follow-up automático de leads.",
+    url: "https://n8n.obreiro.online",
+    screen: "/screens/obreiro-n8n.jpg",
+    tags: ["n8n", "Evolution API", "OpenAI", "Redis"],
   },
 ];
 
