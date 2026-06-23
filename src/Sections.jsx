@@ -358,7 +358,7 @@ const PROJECTS = [
     name: "Aura Cleaning NYC",
     category: "Landing Page",
     description: "Landing page de alta conversão para empresa de limpeza em Nova York, design premium e formulário integrado.",
-    url: "https://aura-cleaning-nyc.vercel.app",
+    url: "https://aura-cleaning-site.vercel.app",
     screen: "/screens/aura-cleaning.jpg",
     tags: ["HTML", "CSS", "Formspree"],
   },
@@ -376,9 +376,18 @@ const PROJECTS = [
     name: "PromptForja",
     category: "SaaS",
     description: "Plataforma SaaS de otimização de prompts com IA, multilíngue, pagamentos BR e internacionais.",
-    url: "https://promptforja.vercel.app",
+    url: "https://promptforja.com",
     screen: "/screens/promptforja.jpg",
     tags: ["React", "Supabase", "Stripe", "n8n"],
+  },
+  {
+    id: "ibadgb",
+    name: "IBAD-GB Sistema Web",
+    category: "Sistema Acadêmico",
+    description: "Sistema de gestão acadêmica para Instituto Bíblico das Assembleias de Deus da Guiné-Bissau — matrícula, notas, diplomas e relatórios.",
+    url: "https://ibadgb.app",
+    screen: "/screens/ibadgb.jpg",
+    tags: ["React", "TypeScript", "Supabase", "Vercel"],
   },
 ];
 
