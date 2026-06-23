@@ -12,6 +12,44 @@ const HERO_COPY = {
   secondary: "Falar no WhatsApp",
 };
 
+
+/* ---------- Video Background ---------- */
+function VideoBg() {
+  return (
+    <div style={{
+      position: "absolute",
+      inset: 0,
+      zIndex: 0,
+      overflow: "hidden",
+      pointerEvents: "none",
+    }}>
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        preload="auto"
+        style={{
+          position: "absolute",
+          inset: 0,
+          width: "100%",
+          height: "100%",
+          objectFit: "cover",
+          objectPosition: "center",
+        }}
+      >
+        <source src="/hero-bg-opt.mp4" type="video/mp4" />
+      </video>
+      {/* Dark overlay so text stays readable */}
+      <div style={{
+        position: "absolute",
+        inset: 0,
+        background: "linear-gradient(to bottom, rgba(13,13,15,0.72) 0%, rgba(13,13,15,0.55) 50%, rgba(13,13,15,0.82) 100%)",
+      }} />
+    </div>
+  );
+}
+
 /* ---------- Animated flow diagram ---------- */
 function HeroFlow() {
   const inputs = [
@@ -76,8 +114,9 @@ function HeroFlow() {
 /* ---------- Variant A — Diagram ---------- */
 function HeroDiagram() {
   return (
-    <header className="hero" data-hero="A">
-      <div className="hero-grid wrap">
+    <header className="hero" data-hero="A" style={{ position:"relative", overflow:"hidden" }}>
+      <VideoBg />
+      <div className="hero-grid wrap" style={{ position:"relative", zIndex:1 }}>
         <div className="hero-copy">
           <span className="kicker" data-reveal>{HERO_COPY.kicker}</span>
           <h1 className="display hero-title" data-reveal style={{ "--d": "80ms" }}>{HERO_COPY.title}</h1>
@@ -102,8 +141,9 @@ function HeroDiagram() {
 /* ---------- Variant B — Editorial ---------- */
 function HeroEditorial() {
   return (
-    <header className="hero hero-ed" data-hero="B">
-      <div className="wrap hero-ed-inner">
+    <header className="hero hero-ed" data-hero="B" style={{ position:"relative", overflow:"hidden" }}>
+      <VideoBg />
+      <div className="wrap hero-ed-inner" style={{ position:"relative", zIndex:1 }}>
         <div className="hero-ed-top" data-reveal>
           <span className="kicker">{HERO_COPY.kicker}</span>
           <span className="hero-ed-index">/01 — Manifesto</span>
