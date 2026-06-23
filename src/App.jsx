@@ -118,7 +118,7 @@ export default function App(){
           <Processo/>
         </div>
 
-        <Portfolio limit={4} />
+        <div style={{background:'#FFFFFF'}}><Portfolio limit={4} /></div>
 
         <div className="s-dark"><Impact/></div>
 

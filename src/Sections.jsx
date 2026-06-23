@@ -401,14 +401,15 @@ function ProjectCard({ project }) {
       style={{
         display: "block",
         textDecoration: "none",
-        background: "rgba(255,255,255,0.03)",
-        border: "1px solid rgba(243,240,233,0.08)",
+        background: "#FFFFFF",
+        border: "1px solid rgba(21,19,14,0.10)",
+        boxShadow: "0 2px 12px rgba(21,19,14,0.06)",
         borderRadius: "4px",
         overflow: "hidden",
         transition: "border-color .3s ease, transform .3s ease, box-shadow .3s ease",
       }}
       onMouseEnter={e => {
-        e.currentTarget.style.borderColor = "rgba(201,162,39,0.5)";
+        e.currentTarget.style.borderColor = "rgba(201,162,39,0.7)";
         e.currentTarget.style.transform = "translateY(-5px)";
         e.currentTarget.style.boxShadow = "0 20px 60px rgba(0,0,0,0.4)";
       }}
@@ -446,11 +447,11 @@ function ProjectCard({ project }) {
       <div style={{ padding: "22px 24px 24px" }}>
         <h3 style={{
           fontFamily: "var(--serif)", fontSize: "1.15rem", fontWeight: 400,
-          color: "#F3F0E9", margin: "0 0 8px", letterSpacing: "-0.02em", lineHeight: 1.2,
+          color: "#15130E", margin: "0 0 8px", letterSpacing: "-0.02em", lineHeight: 1.2,
         }}>{project.name}</h3>
         <p style={{
           fontFamily: "var(--sans)", fontSize: "0.83rem", lineHeight: 1.65,
-          color: "rgba(243,240,233,0.52)", margin: "0 0 16px",
+          color: "rgba(21,19,14,0.58)", margin: "0 0 16px",
         }}>{project.description}</p>
         <div style={{ display: "flex", flexWrap: "wrap", gap: "6px" }}>
           {project.tags.map(tag => (
@@ -469,7 +470,7 @@ function ProjectCard({ project }) {
 export function Portfolio({ limit }) {
   const projects = limit ? PROJECTS.slice(0, limit) : PROJECTS;
   return (
-    <section id="portfolio" style={{ padding: "clamp(64px,9vw,128px) var(--gutter,5vw)" }}>
+    <section id="portfolio" style={{ padding: "clamp(64px,9vw,128px) var(--gutter,5vw)", background: "#FFFFFF" }}>
       <div style={{ maxWidth: "1160px", margin: "0 auto" }}>
         <div data-reveal style={{ marginBottom: "clamp(40px,5vw,72px)" }}>
           <p style={{
@@ -478,7 +479,7 @@ export function Portfolio({ limit }) {
           }}>Portfólio</p>
           <h2 style={{
             fontFamily: "var(--serif)", fontSize: "clamp(2.2rem,4.5vw,3.4rem)",
-            fontWeight: 360, letterSpacing: "-0.03em", color: "var(--fg,#F3F0E9)",
+            fontWeight: 360, letterSpacing: "-0.03em", color: "#15130E",
             margin: 0, lineHeight: 1.08,
           }}>Projetos<br /><em>entregues.</em></h2>
         </div>
