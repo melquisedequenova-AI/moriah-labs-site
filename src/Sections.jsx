@@ -361,6 +361,7 @@ const PROJECTS = [
     url: "https://aura-cleaning-site.vercel.app",
     screen: "/screens/aura-cleaning.jpg",
     tags: ["HTML", "CSS", "Formspree"],
+    international: { flag: "🇺🇸", country: "Estados Unidos" },
   },
   {
     id: "mikaeli-adv",
@@ -388,6 +389,7 @@ const PROJECTS = [
     url: "https://ibadgb.app",
     screen: "/screens/ibadgb.jpg",
     tags: ["React", "TypeScript", "Supabase", "Vercel"],
+    international: { flag: "🇬🇼", country: "Guiné-Bissau" },
   },
   {
     id: "ofertasnow",
@@ -401,6 +403,7 @@ const PROJECTS = [
 ];
 
 function ProjectCard({ project }) {
+  const isIntl = !!project.international;
   return (
     <a
       href={project.url}
@@ -411,8 +414,8 @@ function ProjectCard({ project }) {
         display: "block",
         textDecoration: "none",
         background: "#FFFFFF",
-        border: "1px solid rgba(21,19,14,0.10)",
-        boxShadow: "0 2px 12px rgba(21,19,14,0.06)",
+        border: isIntl ? "1px solid rgba(201,162,39,0.35)" : "1px solid rgba(21,19,14,0.10)",
+        boxShadow: isIntl ? "0 2px 16px rgba(201,162,39,0.12)" : "0 2px 12px rgba(21,19,14,0.06)",
         borderRadius: "4px",
         overflow: "hidden",
         transition: "border-color .3s ease, transform .3s ease, box-shadow .3s ease",
@@ -445,6 +448,18 @@ function ProjectCard({ project }) {
           background: "rgba(13,13,15,0.8)", padding: "5px 10px", borderRadius: "2px",
           backdropFilter: "blur(8px)",
         }}>{project.category}</span>
+        {isIntl && (
+          <span style={{
+            position: "absolute", top: "14px", left: "50%", transform: "translateX(-50%)",
+            fontFamily: "var(--mono)", fontSize: "0.58rem", letterSpacing: ".15em",
+            textTransform: "uppercase", color: "#C9A227",
+            background: "rgba(13,13,15,0.85)", padding: "5px 10px", borderRadius: "2px",
+            backdropFilter: "blur(8px)", display: "flex", alignItems: "center", gap: "5px",
+            whiteSpace: "nowrap",
+          }}>
+            ✦ Internacional
+          </span>
+        )}
         <span style={{
           position: "absolute", top: "14px", right: "14px",
           fontSize: "0.9rem", color: "rgba(243,240,233,0.7)",
@@ -461,7 +476,15 @@ function ProjectCard({ project }) {
         <p style={{
           fontFamily: "var(--sans)", fontSize: "0.83rem", lineHeight: 1.65,
           color: "rgba(21,19,14,0.58)", margin: "0 0 16px",
-        }}>{project.description}</p>
+        }}>
+          {project.description}
+          {isIntl && (
+            <span style={{ marginLeft: "8px", fontSize: "1.1rem", verticalAlign: "middle" }}
+                  title={project.international.country}>
+              {project.international.flag}
+            </span>
+          )}
+        </p>
         <div style={{ display: "flex", flexWrap: "wrap", gap: "6px" }}>
           {project.tags.map(tag => (
             <span key={tag} style={{
