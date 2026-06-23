@@ -341,4 +341,160 @@ function Footer() {
   );
 }
 
+
+/* ---------- Portfolio ---------- */
+const PROJECTS = [
+  {
+    id: "als-contabil",
+    name: "ALS Assessoria Contábil",
+    category: "Site Institucional",
+    description: "Site profissional para escritório de contabilidade e fiscal com foco em credibilidade e captação de clientes.",
+    url: "https://als-contabil.vercel.app",
+    screen: "/screens/als-contabil.jpg",
+    tags: ["HTML", "CSS", "Formspree"],
+  },
+  {
+    id: "aura-cleaning",
+    name: "Aura Cleaning NYC",
+    category: "Landing Page",
+    description: "Landing page de alta conversão para empresa de limpeza em Nova York, design premium e formulário integrado.",
+    url: "https://aura-cleaning-nyc.vercel.app",
+    screen: "/screens/aura-cleaning.jpg",
+    tags: ["HTML", "CSS", "Formspree"],
+  },
+  {
+    id: "mikaeli-adv",
+    name: "Dra. Mikaeli Kezia",
+    category: "Site Profissional",
+    description: "Site premium para advogada em Jundiaí com identidade visual sofisticada e captação de leads.",
+    url: "https://mikaeli-mendonca-adv.vercel.app",
+    screen: "/screens/mikaeli-adv.jpg",
+    tags: ["HTML", "CSS", "WhatsApp"],
+  },
+  {
+    id: "promptforja",
+    name: "PromptForja",
+    category: "SaaS",
+    description: "Plataforma SaaS de otimização de prompts com IA, multilíngue, pagamentos BR e internacionais.",
+    url: "https://promptforja.vercel.app",
+    screen: "/screens/promptforja.jpg",
+    tags: ["React", "Supabase", "Stripe", "n8n"],
+  },
+];
+
+function ProjectCard({ project }) {
+  return (
+    <a
+      href={project.url}
+      target="_blank"
+      rel="noopener noreferrer"
+      data-reveal
+      style={{
+        display: "block",
+        textDecoration: "none",
+        background: "rgba(255,255,255,0.03)",
+        border: "1px solid rgba(243,240,233,0.08)",
+        borderRadius: "4px",
+        overflow: "hidden",
+        transition: "border-color .3s ease, transform .3s ease, box-shadow .3s ease",
+      }}
+      onMouseEnter={e => {
+        e.currentTarget.style.borderColor = "rgba(201,162,39,0.5)";
+        e.currentTarget.style.transform = "translateY(-5px)";
+        e.currentTarget.style.boxShadow = "0 20px 60px rgba(0,0,0,0.4)";
+      }}
+      onMouseLeave={e => {
+        e.currentTarget.style.borderColor = "rgba(243,240,233,0.08)";
+        e.currentTarget.style.transform = "translateY(0)";
+        e.currentTarget.style.boxShadow = "none";
+      }}
+    >
+      <div style={{ position: "relative", overflow: "hidden", aspectRatio: "16/9", background: "#0d0d0f" }}>
+        <img
+          src={project.screen}
+          alt={project.name}
+          loading="lazy"
+          style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "top", display: "block", transition: "transform .4s ease" }}
+          onMouseEnter={e => e.currentTarget.style.transform = "scale(1.03)"}
+          onMouseLeave={e => e.currentTarget.style.transform = "scale(1)"}
+        />
+        <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to bottom, transparent 55%, rgba(13,13,15,0.65) 100%)" }} />
+        <span style={{
+          position: "absolute", top: "14px", left: "14px",
+          fontFamily: "var(--mono)", fontSize: "0.6rem", letterSpacing: ".2em",
+          textTransform: "uppercase", color: "var(--accent,#C9A227)",
+          background: "rgba(13,13,15,0.8)", padding: "5px 10px", borderRadius: "2px",
+          backdropFilter: "blur(8px)",
+        }}>{project.category}</span>
+        <span style={{
+          position: "absolute", top: "14px", right: "14px",
+          fontSize: "0.9rem", color: "rgba(243,240,233,0.7)",
+          background: "rgba(13,13,15,0.8)", padding: "4px 10px", borderRadius: "2px",
+          backdropFilter: "blur(8px)",
+        }}>↗</span>
+      </div>
+
+      <div style={{ padding: "22px 24px 24px" }}>
+        <h3 style={{
+          fontFamily: "var(--serif)", fontSize: "1.15rem", fontWeight: 400,
+          color: "#F3F0E9", margin: "0 0 8px", letterSpacing: "-0.02em", lineHeight: 1.2,
+        }}>{project.name}</h3>
+        <p style={{
+          fontFamily: "var(--sans)", fontSize: "0.83rem", lineHeight: 1.65,
+          color: "rgba(243,240,233,0.52)", margin: "0 0 16px",
+        }}>{project.description}</p>
+        <div style={{ display: "flex", flexWrap: "wrap", gap: "6px" }}>
+          {project.tags.map(tag => (
+            <span key={tag} style={{
+              fontFamily: "var(--mono)", fontSize: "0.58rem", letterSpacing: ".15em",
+              textTransform: "uppercase", color: "rgba(201,162,39,0.8)",
+              border: "1px solid rgba(201,162,39,0.22)", padding: "3px 9px", borderRadius: "2px",
+            }}>{tag}</span>
+          ))}
+        </div>
+      </div>
+    </a>
+  );
+}
+
+export function Portfolio({ limit }) {
+  const projects = limit ? PROJECTS.slice(0, limit) : PROJECTS;
+  return (
+    <section id="portfolio" style={{ padding: "clamp(64px,9vw,128px) var(--gutter,5vw)" }}>
+      <div style={{ maxWidth: "1160px", margin: "0 auto" }}>
+        <div data-reveal style={{ marginBottom: "clamp(40px,5vw,72px)" }}>
+          <p style={{
+            fontFamily: "var(--mono)", fontSize: "0.68rem", letterSpacing: ".28em",
+            textTransform: "uppercase", color: "var(--accent,#C9A227)", margin: "0 0 12px",
+          }}>Portfólio</p>
+          <h2 style={{
+            fontFamily: "var(--serif)", fontSize: "clamp(2.2rem,4.5vw,3.4rem)",
+            fontWeight: 360, letterSpacing: "-0.03em", color: "var(--fg,#F3F0E9)",
+            margin: 0, lineHeight: 1.08,
+          }}>Projetos<br /><em>entregues.</em></h2>
+        </div>
+
+        <div style={{
+          display: "grid",
+          gridTemplateColumns: "repeat(auto-fill, minmax(min(100%, 460px), 1fr))",
+          gap: "24px",
+        }}>
+          {projects.map(p => <ProjectCard key={p.id} project={p} />)}
+        </div>
+
+        {limit && (
+          <div data-reveal style={{ marginTop: "52px", textAlign: "center" }}>
+            <a href="/portfolio" style={{
+              fontFamily: "var(--mono)", fontSize: "0.78rem", letterSpacing: ".1em",
+              textTransform: "uppercase", color: "var(--accent,#C9A227)",
+              textDecoration: "none", borderBottom: "1px solid rgba(201,162,39,0.35)",
+              paddingBottom: "3px",
+            }}>Ver todos os projetos →</a>
+          </div>
+        )}
+      </div>
+    </section>
+  );
+}
+
 export { Manifesto, Services, Diferenciais, Processo, Impact, FinalCTA, Founder, Footer };

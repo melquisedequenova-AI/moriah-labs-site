@@ -1,12 +1,10 @@
-import './moriah.css';
-import './moriah-sections.css';
 import { useState, useEffect } from 'react';
 import {
   useTweaks, TweaksPanel, TweakSection,
   TweakRadio, TweakColor, TweakSelect
 } from './TweaksPanel';
 import { Hero } from './Heroes';
-import { Manifesto, Services, Diferenciais, Processo, Impact, FinalCTA, Founder, Footer } from './Sections';
+import { Manifesto, Services, Diferenciais, Processo, Impact, FinalCTA, Founder, Footer, Portfolio } from './Sections';
 
 const TWEAK_DEFAULTS = {
   "heroVariant": "A",
@@ -47,6 +45,7 @@ function Nav({ heroDark }) {
         <a className="nav-hide" href="#manifesto">Manifesto</a>
         <a className="nav-hide" href="#servicos">Serviços</a>
         <a className="nav-hide" href="#processo">Processo</a>
+        <a className="nav-hide" href="/portfolio">Portfólio</a>
         <a className="nav-cta" href="#contato">Solicitar projeto</a>
       </div>
     </nav>
@@ -118,6 +117,8 @@ export default function App(){
           <hr className="rule wrap-rule" />
           <Processo/>
         </div>
+
+        <Portfolio limit={4} />
 
         <div className="s-dark"><Impact/></div>
 
