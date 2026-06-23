@@ -389,6 +389,15 @@ const PROJECTS = [
     screen: "/screens/ibadgb.jpg",
     tags: ["React", "TypeScript", "Supabase", "Vercel"],
   },
+  {
+    id: "ofertasnow",
+    name: "OfertasNow",
+    category: "E-commerce / Ofertas",
+    description: "Plataforma de ofertas e promoções com foco em curadoria de produtos e experiência de compra simplificada.",
+    url: "http://ofertasnow.app.br/",
+    screen: "/screens/ofertasnow.jpg",
+    tags: ["HTML", "CSS", "JavaScript"],
+  },
 ];
 
 function ProjectCard({ project }) {
